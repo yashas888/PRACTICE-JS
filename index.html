@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Scroll</button>
+    <div class="parent">
+        <!-- <img  height="200" id="image" src="" alt="Product image">
+        <h1 id="name"></h1>
+        <p id="desc"></p> -->   
+    </div>
+
+    <div id="last">last</div>
+    <div style="height: 100vh;">last</div>
+
+</body>
+<script src="index.js"></script>
+</html>
+
+<style>
+    .parent {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        box-shadow: 10px 10px 20px rgba(44, 44, 44, 0.568);
+        padding: 30px;
+        margin: 10px;
+        width: 350px;
+    }
+    /* .card img {
+        transform: translateX(50%);
+    } */
+    #last {
+        height: 100px;
+        background-color: aquamarine;
+    }
+</style>
+
+<script>
+// {
+//     "productId": 1,
+//     "productName": "realme C25Y (Metal Grey, 128 GB)  (4 GB RAM)",
+//     "productDescription": "4 GB RAM | 128 GB ROM | Expandable Upto 256 GB 16.51 cm (6.5 inch) HD+ Display 50MP + 2MP + 2MP | 8MP Front Camera 5000 mAh Battery Unisoc T610 Octa Core Processor",
+//     "productImageUrl": "https://rukminim1.flixcart.com/image/416/416/ktlu9ow0/mobile/p/c/u/c25y-rmx3265-realme-original-imag6wmjczbfhk4w.jpeg?q=70",
+//     "category": {
+//         "categoryid": 2,
+//         "categoryname": "Electronics"
+//     },
+//     "productBrand": {
+//         "productBrandName": "Realme",
+//         "productBrandLogoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Realme-realme-_logo_box-RGB-01.svg/2560px-Realme-realme-_logo_box-RGB-01.svg.png"
+//     }
+// }
+
+    // const parent = document.querySelector('.parent');
+    // const btn = document.querySelector('button');
+    // const last = document.querySelector('#last');
+
+    // btn.onclick = (e) => {
+    //     last.scrollIntoView({
+    //         behavior:"smooth"
+    //     })
+    // }
+    
+    // fetch("https://192.168.43.99:5001/graphql/products", {
+    // method:"POST",
+    // headers: {
+    //     "content-type": "application/json"
+    // },
+    // body: JSON.stringify({
+    //         query: `
+    //         query {
+    //             Product {
+    //                 edges {
+    //                 node {
+    //                     productId,
+    //                     productName,
+    //                     productDescription,
+    //                     productImageUrl
+    //                     category {
+    //                     categoryid,
+    //                     categoryname
+    //                     }
+    //                     productBrand {
+    //                     productBrandName,
+    //                     productBrandLogoUrl
+    //                     }
+    //                 }
+    //                 }
+    //             }
+    //             }
+    //         `})
+    // })
+    // .then(x => x.json())
+    // .then(x => Test(x));
+
+    // function Test(x) {
+    //     // const data = x.data.Product.edges[0].node;
+    //     const data = x.data.Product.edges;
+    //     console.log(data);
+        
+    //     data.forEach(ele => {
+    //         parent.innerHTML += GetHtml(ele.node.productImageUrl, ele.node.productName, ele.node.productDescription);
+    //     });data.forEach(ele => {
+    //         parent.innerHTML += GetHtml(ele.node.productImageUrl, ele.node.productName, ele.node.productDescription);
+    //     });data.forEach(ele => {
+    //         parent.innerHTML += GetHtml(ele.node.productImageUrl, ele.node.productName, ele.node.productDescription);
+    //     });
+
+    // }
+
+    // function GetHtml(imgSrc, name, desc) {
+    //     return `
+    //         <div class="card" >
+    //             <img  height="200" id="image" src="${imgSrc}" alt="Product image">
+    //             <h1 id="name">${name}</h1>
+    //             <p id="desc">${desc}</p>
+    //         </div>
+    //     `;
+    // }
+
+    // [1, 2, 3, 4, 5].forEach(x => {
+    //     console.log(x);
+    // })
+
+</script>

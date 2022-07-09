@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div class="parent">
+
+    <!-- <div class="card">
+        <img id="img" src="" alt="">
+        <h1 class="name"></h1>
+        <p class="desc"></p>
+    </div> -->
+</div>
+
+</body>
+<script>
+    fetch("https://192.168.43.99:5001/graphql/products", {
+        method: "POST",
+        headers: {
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            query: `
+            query {
+                Product {
+                    edges {
+                    node {
+                        productId,
+                        productName,
+                        productDescription,
+                        productImageUrl
+                        category {
+                        categoryid,
+                        categoryname
+                        }
+                        productBrand {
+                        productBrandName,
+                        productBrandLogoUrl
+                        }
+                    }
+                    }
+                }
+                }
+            `})
+    })
+        .then(x => x.json())
+        .then(x => Test(x));
+
+    function Test(x) {
+        const arr = x.data.Product.edges;
+        const name = arr[0].node.productName;
+        const desc = arr[0].node.productDescription;
+        const img = arr[0].node.productImageUrl;
+
+        const parent = document.querySelector(".parent");
+        // document.querySelector("#img").setAttribute("src", img)
+        // document.querySelector(".desc").innerHTML=desc;
+        // document.querySelector(".name").innerHTML=name;
+
+        arr.forEach(ele => {
+            parent.innerHTML += card(ele.node.productName, ele.node.productImageUrl ,ele.node.productDescription)
+        });
+
+        function card(name1, img1, desc1) {
+            return `
+            <div class="card">
+                <img id="img" src="${img1}" alt="">
+                <h1 class="name">${name1}</h1>
+                <p class="desc">${desc1}</p>
+            </div>          `
+        }
+    }
+</script>
+
+</html>

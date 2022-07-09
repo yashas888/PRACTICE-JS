@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>
+        login
+    </button>
+    <div>
+        <h1>not logged in</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat reprehenderit ab vel consequatur quaerat itaque architecto suscipit velit? Molestias adipisci, a ex magni fuga nihil voluptate neque earum perferendis facere.</p>
+    </div>
+</body>
+<script>
+    const btn = document.querySelector("button");
+    const h1 = document.querySelector("h1");
+    let loggedIn = false;
+    btn.onclick = (e) =>{
+        if(loggedIn){
+            btn.innerHTML = "login";
+            loggedIn = false;
+            h1.innerHTML = "logged Out";
+        }
+        else{
+            btn.innerHTML = "logout";
+            loggedIn = true;
+            h1.innerHTML = "loggedIn"
+        }
+    }
+
+    const para = document.querySelector("p");
+    h1.onmouseover = () =>{
+        para.style.display = "block";
+    }
+    h1.onmouseout = ( ) =>{
+        para.style.display = "none";
+    }
+
+
+</script>
+
+<style>
+    p{
+        width: 200px;
+        display: none;
+    }
+    h1{
+        width: 200px;
+    }
+</style>
+</html>

@@ -1,0 +1,108 @@
+body {
+  /* background-color: #2c3338; */
+  background-color: black;
+  color: #606468;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  /* font-size: 0.875rem; */
+  font-weight: 400;
+  height: 100%;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+}
+
+input {
+  background-color: #3b4148;
+  border-radius: 0.3rem;
+  /* padding: 1rem; */
+  width: 95%;
+  height: 30px;
+  flex: 1;
+  background-image: none;
+  border: 0;
+  color: white;
+  font: inherit;
+  outline: 0;
+  padding: 10px;
+}
+
+.signup_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  /* max-width: 20rem; */
+  width: 90%;
+}
+
+#confirm-pass {
+  margin-top: 10px;
+}
+
+.name {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  /* width: 100%; */
+}
+
+.username {
+  display: flex;
+  align-items: center;
+}
+
+#userimg,
+#passimg,
+#mail {
+  width: 30px;
+  margin-right: 10px;
+  background-color: #363b41;
+  padding: 10px;
+  margin-left: 0px;
+  border-radius: 0.3rem;
+}
+.email {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#address {
+  margin-bottom: 10px;
+}
+
+#btn {
+  background-color: var(--pink);
+  color: var(--white);
+  height: 50px;
+  margin-top: 20px;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  width: 100%;
+  background-image: none;
+  border: 0;
+  font-family: Arial;
+  outline: 0;
+  padding: 0;
+  transition: background-color ease-in-out 0.2s;
+  box-sizing: inherit;
+}
+
+
+a{
+  color: #eee;
+outline: 0;
+text-decoration: none;
+}
+
+p{
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
