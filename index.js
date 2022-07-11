@@ -286,7 +286,7 @@ for(let i = 0; i<word.length; i++){
 }
 
 if (word === rword){
-    console.log("palindrome");
+    // console.log("palindrome");
 }
 // else console.log("not palindrome");
 
@@ -294,7 +294,51 @@ if (word === rword){
 function sumup(n){
     return (n/2) * (1+n);
 }
-console.log(sumup(100));
+// console.log(sumup(100));
+
+// csv into 2d array
+const parseCSV = (csvString) =>
+    csvString.split("\n").map(row => row.split(','));
+
+const srt = `abc,def,ghi
+jkl,mno,pqr
+stu,vwx,yza`
+
+// console.log(parseCSV(srt));
+
+const value = [1,2,3,4,5,6,7,8,9,"A","B","c","d","e","f"];
+const random = () =>{
+    let hexColor = "#";
+    for (i= 0; i<6 ;i++){
+        let randomNumber = Math.floor(Math.random() * value.length);
+        hexColor += value[randomNumber];
+
+    }
+    // console.log(hexColor);
+    return hexColor
+}
+
+random();
+
+// find duplicate values in array
+
+function findDuplicates(array){
+    return array.filter((ele,index,arr) => arr.indexOf(ele) !== index);
+}
+// console.log(findDuplicates([1,2,3,4,5,64,3,2,1,5]));
+
+// find min/max number in given array
+
+function findMax(array){
+  let max = array[0];
+  for(let i=1 ;i< array.length ; ++i){
+      if (array[i] > max){
+          max = array[i];
+      }
+      console.log(max)
+  }
+}
+findMax([2,4,5,67,8,9,44,656,7]);
 
 
 
